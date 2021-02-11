@@ -36,24 +36,20 @@ public class Comptes extends AppCompatActivity {
                     return;
                 }
                 List<Post> posts = response.body();
-
                 for (Post post : posts) {
                     String content = "";
-                    if (post.getId() == "@id/account_id") {
                         content += "ID: " + post.getId() + "\n";
                         content += "Nom de compte: " + post.getAccount_name() + "\n";
                         content += "Somme: " + post.getAmount() + "\n";
                         content += "IBAN " + post.getIban() + "\n";
+                        Log.d("contenu",content);
                         textViewResult.append(content);
-                    }
                 }
             }
-
             @Override
             public void onFailure(Call<List<Post>> call, Throwable t) {
                 textViewResult.setText(t.getMessage());
             }
-
         });
     }
 }

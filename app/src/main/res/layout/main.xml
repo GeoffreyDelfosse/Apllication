@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="364dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="207dp">
 
